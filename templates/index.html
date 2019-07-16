@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+</head>
+<body>
+<form action="/next/" method="post">
+    {% csrf_token %}
+
+    <table align="center">
+        <tr><th>Login page</th></tr>
+        <tr><td><input type="text" placeholder="User-name"  name="uname" required></td></tr>
+        <tr><td><input type="password" placeholder="User-password" name="upass" required ></td></tr>
+        <tr><td align="right" bgcolor="#ee82ee"><input type="submit" value="Login"></td></tr>
+    </table>
+
+    <font face="Chiller" size="5" color="red">
+        <center>{{ message }}</center>
+    </font>
+</form>
+</body>
+</html>
